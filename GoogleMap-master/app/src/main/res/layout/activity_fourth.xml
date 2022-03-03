@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#204455"
+    tools:context=".FourthActivity">
+
+    <!--> <TableLayout
+            android:id="@+id/MyData1Table"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="30dp"
+            android:stretchColumns="+"
+            android:backgroundTint="@color/bgcolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            // 첫번째 행 # 대한민국(시/도) 코로나 발생현황
+            /* MyData
+                val gubun : String,         //지역
+                val def_cnt: Int,           //확진자수
+                val iso_ing_cnt : Int,      //격리자수
+                val death_cnt : Int,        //사망자
+                val iso_clear_cnt:Int,      //격리해제수
+                val inc_dec : Int           //전일대비 증감
+            */
+            <TableRow
+                android:id="@+id/MyDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/row1col1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="지역"
+                    android:textColor="#ECE8CA"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/row1col2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="확진자 수"
+                    android:textColor="#ECE8CA"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/row1col3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="격리자 수"
+                    android:textColor="#ECE8CA"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/row1col4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="사망자 수"
+                    android:textColor="#ECE8CA"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/row1col5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="격리해제 수"
+                    android:textColor="#ECE8CA"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/row1col6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="전일대비 증감"
+                    android:textColor="#ECE8CA"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </TableRow>
+        </TableLayout> <-->
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPaper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1" />
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/viewPaperTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintHeight_percent=".1"
+            app:tabIndicatorColor="#3F51B5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewPaper">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/areaTab"
+                android:text="지역"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageTab"
+                android:text="연령"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sexTab"
+                android:text="성별"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ageChartTab"
+                android:text="연령\n차트"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sexChartTab"
+                android:text="성별\n차트"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weekChartTab"
+                android:text="주간\n차트"/>
+
+           </com.google.android.material.tabs.TabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="129dp"
+        android:layout_marginBottom="48dp"
+        android:text="201712099 최규진"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.mymp3player.VolumeControlView
+        android:id="@+id/imageView"
+        android:layout_width="219dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/pauseBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/knob" />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:text="■"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pauseBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pauseBtn" />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:text="▶"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pauseBtn"
+        app:layout_constraintEnd_toStartOf="@+id/pauseBtn"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pauseBtn"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginRight="173dp"
+        android:layout_marginBottom="240dp"
+        android:text="ㅣㅣ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

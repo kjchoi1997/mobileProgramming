@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IntroActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:background="#9A00BCD4"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="레알영어"
+        android:textColor="#FF9800"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/quizbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="퀴즈"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/addvocbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="단어추가"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#CDDC39"
+        android:gravity="center"
+        android:text="단어를 하나 추가시키고 진행하세요!!"
+        android:textColor="#FF5722"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/img1"/>
+</LinearLayout>

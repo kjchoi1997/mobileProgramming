@@ -1,0 +1,1 @@
+export 'inq_model.dart';
